@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="movie_logo">150dp</dimen>
+    <dimen name="margin_top">10dp</dimen>
+</resources>
