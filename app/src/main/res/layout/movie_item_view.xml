@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/margin_top_5dp"
+    android:layout_height="wrap_content"
     tools:context=".ui.movie.MovieList">
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -12,7 +13,6 @@
         android:layout_height="@dimen/movie_logo"
         android:contentDescription="Hello World!"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:background="@drawable/ic_launcher_background" />
@@ -21,11 +21,10 @@
         android:id="@+id/movieNameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_top"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/movieLogo"
+        app:layout_constraintStart_toEndOf="@+id/movieLogo"
+        app:layout_constraintTop_toTopOf="parent"
         tools:text="Testing movie" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

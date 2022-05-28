@@ -33,8 +33,7 @@ val retrofitModule = module {
         return GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.IDENTITY).create()
     }
 
-    fun provideRetrofit(factory: Gson, client: OkHttpClient): Retrofit {
-        //val baseUrl = BuildConfig.BASE_URL
+    fun provideRetrofit(factory: Gson, client: OkHttpClient): Retrofit{
         return Retrofit.Builder().baseUrl("https://tw-mobile-hiring.web.app/")
             .addConverterFactory(GsonConverterFactory.create(factory))
             .addCallAdapterFactory(CoroutineCallAdapterFactory()).client(client).build()

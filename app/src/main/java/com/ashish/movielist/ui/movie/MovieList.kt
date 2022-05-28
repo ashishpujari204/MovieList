@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.ashish.movielist.databinding.ActivityMainBinding
 import com.ashish.movielist.model.Card
 import com.ashish.movielist.network.ResponseState
@@ -47,7 +48,7 @@ class MovieList : AppCompatActivity() {
         with(binding) {
             val dashboardAdapter = MovieListAdapter(cards)
             movieRecyclerView.apply {
-                layoutManager = GridLayoutManager(context, 2)
+                layoutManager = LinearLayoutManager(context)
                 setHasFixedSize(true)
                 adapter = dashboardAdapter
             }
